@@ -49,6 +49,71 @@ namespace RomanNumerals_Tests
         }
 
         [TestMethod]
+        public void ShouldReturnIVFor4()
+        {
+            // Arrange via setup
+
+            // Act
+
+            // Assert
+            Assert.AreEqual("IV", _converter.IntToRomanNumerals(4));
+        }
+
+        [TestMethod]
+        public void ShouldReturnVFor5()
+        {
+            // Arrange via setup
+
+            // Act
+
+            // Assert
+            Assert.AreEqual("V", _converter.IntToRomanNumerals(5));
+        }
+
+        [TestMethod]
+        public void ShouldReturnVIFor6()
+        {
+            // Arrange via setup
+
+            // Act
+
+            // Assert
+            Assert.AreEqual("VI", _converter.IntToRomanNumerals(6));
+        }
+        [TestMethod]
+        public void ShouldReturnVIIFor7()
+        {
+            // Arrange via setup
+
+            // Act
+
+            // Assert
+            Assert.AreEqual("VII", _converter.IntToRomanNumerals(7));
+        }
+
+        [TestMethod]
+        public void ShouldReturnVIIIFor8()
+        {
+            // Arrange via setup
+
+            // Act
+
+            // Assert
+            Assert.AreEqual("VIII", _converter.IntToRomanNumerals(8));
+        }
+
+        [TestMethod]
+        public void ShouldReturnIXFor9()
+        {
+            // Arrange via setup
+
+            // Act
+
+            // Assert
+            Assert.AreEqual("IX", _converter.IntToRomanNumerals(9));
+        }
+
+        [TestMethod]
         public void ShouldReturnDFor500()
         {
             // Arrange via setup
