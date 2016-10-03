@@ -12,7 +12,8 @@ namespace Roman_Numerals
 
         private string _output;
         private List<int> _number;
-        private char[] _chars = {'I', 'V', 'X', 'L', 'C', 'D', 'M', 'F', 'F'};
+        //private char[] _chars = {'I', 'V', 'X', 'L', 'C', 'D', 'M', 'F', 'F'};
+        private char[] _chars = { '*', '*', 'M', 'D', 'C', 'L', 'X', 'V', 'I' };
 
         public string IntToRomanNumerals(int n)
         {
@@ -36,14 +37,17 @@ namespace Roman_Numerals
             //Hundreds();
             //Tenths();
             //Ones();
-
             
-            Digit(_number[0], _chars[6], _chars[7], _chars[8]);
-            Digit(_number[1], _chars[4], _chars[5], _chars[6]);
-            Digit(_number[2], _chars[2], _chars[3], _chars[4]);
-            Digit(_number[3], _chars[0], _chars[1], _chars[2]);
+            //Digit(_number[0], _chars[6], _chars[7], _chars[8]);
+            //Digit(_number[1], _chars[4], _chars[5], _chars[6]);
+            //Digit(_number[2], _chars[2], _chars[3], _chars[4]);
+            //Digit(_number[3], _chars[0], _chars[1], _chars[2]);
 
-
+            for (int i = 0; i < _number.Count; i++)
+            {
+                Digit(_number[i], _chars[2*i+2], _chars[2*i+1], _chars[2*i]);
+            }
+            
             return _output;
         }
 
