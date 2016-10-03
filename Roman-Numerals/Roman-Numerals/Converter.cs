@@ -11,11 +11,14 @@ namespace Roman_Numerals
         }
 
         private string _output;
-        private List<int> _number = new List<int>();
+        private List<int> _number;
         private char[] _chars = {'I', 'V', 'X', 'L', 'C', 'D', 'M'};
 
         public string IntToRomanNumerals(int n)
         {
+            _number = new List<int>();
+            _output = string.Empty;
+
             while (n > 0)
             {
                 _number.Add(n % 10);
@@ -71,7 +74,7 @@ namespace Roman_Numerals
         {
             if (_number[2] == 0) return;
             if (_number[2] <= 3)
-                for (int i = 0; i < _number[3]; i++)
+                for (int i = 0; i < _number[2]; i++)
                 {
                     _output += _chars[2];
                 }

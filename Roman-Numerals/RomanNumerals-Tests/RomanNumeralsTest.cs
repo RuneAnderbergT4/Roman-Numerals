@@ -114,6 +114,17 @@ namespace RomanNumerals_Tests
         }
 
         [TestMethod]
+        public void ShouldReturnLXXVIFor76()
+        {
+            // Arrange via setup
+
+            // Act
+
+            // Assert
+            Assert.AreEqual("LXXVI", _converter.IntToRomanNumerals(76));
+        }
+        
+        [TestMethod]
         public void ShouldReturnDFor500()
         {
             // Arrange via setup

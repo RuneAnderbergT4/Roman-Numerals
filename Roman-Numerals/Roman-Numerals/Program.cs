@@ -8,8 +8,12 @@ namespace Roman_Numerals
         {
             Converter converter = new Converter();
 
-            converter.IntToRomanNumerals(1);
-            
+            for (int i = 0; i < 4000; i++)
+            {
+                Console.WriteLine(i + ":   " + converter.IntToRomanNumerals(i));
+            }
+
+            Console.ReadLine();
         }
     }
 }
