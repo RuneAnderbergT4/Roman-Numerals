@@ -26,7 +26,7 @@ namespace Roman_Numerals
             {
                 _number.Add(0);
             }
-
+            
             _number.Reverse();
 
             Thousands();
@@ -47,16 +47,51 @@ namespace Roman_Numerals
 
         private void Hundreds()
         {
-            
+            if (_number[1] == 0) return;
+            if (_number[1] <= 3)
+                for (int i = 0; i < _number[1]; i++)
+                {
+                    _output += _chars[4];
+                }
+            else if (_number[1] == 4)
+                _output += (_chars[4].ToString() + _chars[5]);
+            else if (_number[1] <= 8)
+            {
+                _output += _chars[5];
+                for (int i = 0; i < _number[1] - 5; i++)
+                {
+                    _output += _chars[4];
+                }
+            }
+            else
+                _output += (_chars[4].ToString() + _chars[6]);
         }
 
         private void Tenths()
         {
-            
+            if (_number[2] == 0) return;
+            if (_number[2] <= 3)
+                for (int i = 0; i < _number[3]; i++)
+                {
+                    _output += _chars[2];
+                }
+            else if (_number[2] == 4)
+                _output += (_chars[2].ToString() + _chars[3]);
+            else if (_number[2] <= 8)
+            {
+                _output += _chars[3];
+                for (int i = 0; i < _number[2] - 5; i++)
+                {
+                    _output += _chars[2];
+                }
+            }
+            else
+                _output += (_chars[2].ToString() + _chars[4]);
         }
 
         private void Ones()
         {
+            if (_number[3] == 0) return;
             if (_number[3] <= 3)
                 for (int i = 0; i < _number[3]; i++)
                 {

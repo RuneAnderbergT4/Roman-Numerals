@@ -8,7 +8,7 @@ namespace Roman_Numerals
         {
             Converter converter = new Converter();
 
-            converter.IntToRomanNumerals(123);
+            converter.IntToRomanNumerals(1);
             
         }
     }
