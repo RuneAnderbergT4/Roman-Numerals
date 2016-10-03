@@ -11,17 +11,12 @@ namespace Roman_Numerals
         }
 
         private string _output;
-        private string _number;
-        private string _invertedNumber;
+        private string[] _number;
         private char[] _chars = {'I', 'V', 'X', 'L', 'C', 'D', 'M'};
 
         public string IntToRomanNumerals(int n)
         {
-            _number = n.ToString();
-
             return _output;
-
-            
         }
     }
 }
